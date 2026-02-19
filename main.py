@@ -66,4 +66,4 @@ email["sent_text"] = f"""
 
 # 11. Рассчитайте количество страниц печати
 
-email.pages = dsf123
+email.pages = dsf123214
