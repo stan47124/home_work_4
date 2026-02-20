@@ -66,4 +66,40 @@ email["sent_text"] = f"""
 
 # 11. Рассчитайте количество страниц печати
 
-email.pages = dsf123214
+pages = ((len)(email["sent_text"]) + 499) // 500
+email["pages"] = pages
+
+# 12. Проверьте пустоту темы и тела письма
+
+is_subject_empty = not email["subject"]
+is_body_empty = not email["body"]
+
+# 13. Создайте «маску» e-mail отправителя
+
+email['masked_from'] = login[:2] + "***@" + domain
+
+# 14. Удалите из списка личных доменов
+
+list_private_domains.remove("list.ru")
+list_private_domains.remove("bk.ru")
+
+# Итог
+
+print(email)
+print(email['send_date'])
+print(email["from"])
+print(email["to"])
+login
+domain
+print(email["short_body"])
+print(list_private_domains)
+print(list_corporation_domains)
+print(intersection)
+print(is_corporate)
+print(email["clean_body"])
+print(email["sent_text"])
+email["pages"]
+print(is_subject_empty)
+print(is_body_empty)
+print(email['masked_from'])
+print(list_private_domains)
